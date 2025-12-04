@@ -11,31 +11,16 @@
       sizes="96x96"
     />
 
-    <title>Guess The Word Game | devChallenges.io</title>
-
-    <!--You are welcome to delete these styles or modify them in your own stylesheet -->
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        height: 100vh;
-      }
-
-      .author-info {
-        font-size: 14px;
-        text-align: center;
-        margin-top: 16px;
-        color: rgb(55, 65, 81);
-      }
-
-      .author-info a {
-        text-decoration: none;
-      }
-    </style>
+    <title>Guess The Word Game</title>
+    <!-- font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css stylesheet -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- 
@@ -51,11 +36,39 @@
   Reset
   -->
 
-    <div class="author-info">
-      Coded by <a href="#">Your Name Here</a> | Challenge by
+    <div class="wrapper">
+      <img
+        class="header"
+        src="resources/word-scramblle-logo.svg"
+        alt="Game Logo"
+      />
+      <div class="text-jumbled">relowf</div>
+      <div class="tries-mistakes-sec">
+        <div class="tries-sec">
+          Tries (0/5):
+          <div class="attempts">
+            <div data-attempt="1"></div>
+            <div data-attempt="2"></div>
+            <div data-attempt="3"></div>
+            <div data-attempt="4"></div>
+            <div data-attempt="5"></div>
+          </div>
+        </div>
+        <div class="mistakes-sec">Mistakes: a,e,w,t</div>
+      </div>
+      <div class="input-sec"><div>_</div></div>
+      <div class="random-reset-btn">
+        <button class="random-btn">Random</button>
+        <button class="reset-btn">Reset</button>
+      </div>
+    </div>
+
+    <footer class="author-info">
+      Coded by <a href="#">Masrukh Ahmed</a> | Challenge by
       <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
         >devChallenges.io</a
       >.
-    </div>
+    </footer>
   </body>
+  <script src="app.js"></script>
 </html>
