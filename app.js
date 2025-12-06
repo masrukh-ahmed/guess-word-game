@@ -1,4 +1,13 @@
-const words = ["example", "javascript", "coding", "challenge"];
+const words = [
+  "example",
+  "javascript",
+  "coding",
+  "challenge",
+  "hello",
+  "linux",
+  "software",
+  "developer",
+];
 // let unscrambledForm = localStorage.getItem("unscrambledForm") || "";
 // let scrambledForm = localStorage.getItem("scrambledForm") || "";
 
@@ -48,7 +57,6 @@ displayMistakesTries(mistakes, triesLeft);
 function handleInput(e) {
   let originalWord = localStorage.getItem("unscrambledForm");
   enteredUserWord.push(e.key);
-  // console.log(originalWord);
   if (triesLeft != 0) {
     if (enteredUserWord.length == originalWord.length) {
       let { correct, mistakes } = checkInput(enteredUserWord.join(""));
@@ -65,9 +73,9 @@ function handleInput(e) {
         console.log(mistakes, triesLeft);
         displayMistakesTries(mistakes, triesLeft);
         if (triesLeft == 0) {
+          displayMistakesTries(mistakes, triesLeft);
           alert(`You lost all chances !! RESET..`);
           resetAll();
-          displayMistakesTries(mistakes, triesLeft);
           return;
         }
         alert(`Try again !!`);
@@ -96,10 +104,10 @@ function checkInput(userEnteredWord) {
 }
 
 function displayMistakesTries(mistakes, tries) {
-  mistakesSec.innerHTML = `Mistakes: ${mistakes.join(", ")}`;
+  mistakesSec.innerHTML = `Mistakes : ${mistakes.join(", ")}`;
 
   triesLeftText.innerHTML =
-    `Tries (${tries}/5): <div class="attempts">` +
+    `Tries (${tries}/5) : <div class="attempts">` +
     `${triesLeftDiv
       .map((div, index) => {
         if (index < tries) {
